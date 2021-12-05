@@ -26,11 +26,11 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 git clone https://github.com/YL2209/default-settings.git package/default-settings
 
 # 修改主机名字，把XXKDB-R4A修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='MiWIFI'' package/lean/default-settings/files/zzz-default-settings
+# sed -i '/uci commit system/i\uci set system.@system[0].hostname='MiWIFI'' package/lean/default-settings/files/zzz-default-settings
 
 # 版本号里显示一个自己的名字（ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
 #sed -i "s/OpenWrt /ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
-sed -i "s/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ 星新课代表制作出品 /g" package/lean/default-settings/files/zzz-default-settings
+# sed -i "s/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ 星新课代表制作出品 /g" package/lean/default-settings/files/zzz-default-settings
 
 #更改主机型号，支持中文。 
 # sed -i "s/Xiaomi Mi Router 4A Gigabit Edition/星新课代表制作出品/g" target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts
